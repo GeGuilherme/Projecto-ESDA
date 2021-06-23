@@ -6,6 +6,7 @@
 #define MAX_EQUIPA 5
 #define MAX_JOGADORES 17
 
+// Esta eh a definicao de estruturas, a Estrutura Jogador e Equipas
 typedef struct
 {
 	char nome[17];
@@ -26,13 +27,14 @@ typedef struct
 }Jogadores;
 Equipa equipa[MAX_EQUIPA];
 Jogadores jogadores[MAX_JOGADORES];
-	
+
+// A baixo temos os prototipos, isto para a sua pos implementacao	
 void menu();	
 void cadastrar_Equipa();
 void cadastrar_Jogador();
 void listar();
 	
-	
+//Funcao principal que depois 	
 int main()
 {
 	printf("\t\tPrograma de Cadastro de Equipas e Jogadores\n\n");
@@ -41,6 +43,7 @@ int main()
 	return 0;
 }
 
+// Tudo que vem abaixo sao funcoes independentes que vao ser aplicadas no main
 void menu(){
 	//system("cls");
 
