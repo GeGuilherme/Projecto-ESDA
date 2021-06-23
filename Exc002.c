@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include <windows.h>
 
-#define MAX_EQUIPA 5
-#define MAX_JOGADORES 17
 
 typedef struct
 {
@@ -88,7 +85,7 @@ void cadastrar_Equipa(){
 			printf("Nome: ");
 			fgets(equipa->nome,sizeof(nome),stdin);		
 			
-			for(x = 0; x < 7; ++x){
+			for(x = 0; x < 5; ++x){
 				if(equipa->activo==0){
 				//	equipa->id=id[x];
 					strcpy(equipa->nome, nome);
@@ -125,7 +122,7 @@ void cadastrar_Jogador(){
 	FILE * arquivo;
 	arquivo= fopen("jogadores.txt", "a");
 	if(arquivo!=NULL){
-		fprintf(arquivo, "%i %s  %s %s %s %s %i", jogadores->id, jogadores->apelido, jogadores->nome, jogadores->data_incio_contrato, jogadores->data_fim_contrato, jogadores->n_golos);
+		fprintf(arquivo, "%p %p  %p %p %p %p %p", jogadores->id, jogadores->apelido, jogadores->nome, jogadores->data_incio_contrato, jogadores->data_fim_contrato, jogadores->n_golos);
 	}fclose(arquivo);
 	
 	do{
